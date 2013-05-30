@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_location'
   s.version     = '2.0.0'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Add latitude and longitude to Spree::Product'
+  s.description = 'Add latitude and longitude to Spree::Product'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'Pedro Quintero, Miguel Sancho'
