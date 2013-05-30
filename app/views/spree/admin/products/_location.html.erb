@@ -1,0 +1,8 @@
+<div class="right four columns omega" data-hook="admin_product_form_right">  
+    <%= f.fields_for :location_id do |location_field| %>   
+        <%= location_field.label(:latitude, I18n.t('latitude')) %><br />
+        <%= location_field.number_field :latitude %>
+        <%= location_field.label(:longitude, I18n.t('longitude')) %><br />
+        <%= location_field.number_field :longitude %>    
+    <% end %>
+</div>
