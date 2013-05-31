@@ -8,5 +8,13 @@ Spree::Product.class_eval do
 	map.latitude != 0.0   and map.longitude != 0.0      
   end
   
+  def location_id
+    self.location.try :id
+  end
+
+  def location_id=(id)
+     self.location = Spree::Location.find_by_id(id)
+  end	
+
   
 end
