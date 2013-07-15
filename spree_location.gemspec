@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = 'Add latitude and longitude to Spree::Product'
   s.required_ruby_version = '>= 1.9.3'
 
-  s.author    = 'Pedro Quintero, Miguel Sancho'
-  s.email     = 'info@openjaf.com'
+  s.author    = 'Miguel Sancho, Pedro Quintero'
+  s.email     = 'info@openjaf.com, sanchocuba@gmail.com' 
   s.homepage  = 'http://www.openjaf.com'
 
   #s.files       = `git ls-files`.split("\n")
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~>2.0.0.rc1'
+  s.add_dependency 'spree_core', '~>2.0'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'google_static_maps_helper'
 end

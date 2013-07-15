@@ -1,15 +1,4 @@
 <div data-hook="product_map">
- <%#=TODO: LocationHelper.methods%>                      
  <h6 class="product-section-title"><%= Spree.t('map')%></h6>
- <% url = "http://maps.google.com/maps/api/staticmap" %>
-        <% options = {} %>
-        <% options[:size] = '340x255' %>
-        <% options[:maptype] = 'roadmap' %>
-        <% options[:sensor] = 'false' %>
-        <% options[:markers] = "#{61.1631},#{-149.9721},blue" %>
-        <% options[:center] = "#{61.1631},#{-149.9721}" %>
-        <% options[:zoom] = 15 %>
-        <% query_string = options.keys.collect{|key| "#{key}=#{options[key]}"}.join('&') %>
-        <% full_url = "#{url}?#{query_string}" %>
-<%= %<<img src="#{full_url}">>.html_safe %>
+ <%= product_map( @product || product) %> 		
 </div>

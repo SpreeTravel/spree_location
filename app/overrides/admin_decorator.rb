@@ -5,3 +5,9 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
                      :disabled => false                   				                                  
 					 )            
 					 
+Deface::Override.new(:virtual_path => "spree/admin/products/edit",
+                     :name => "add_location",
+                     :insert_before => "[class='no-border-top']",
+                     :text => "<% @product.location ||= Spree::Location.new %>",  
+                     :disabled => false                   				                                  
+					 )            

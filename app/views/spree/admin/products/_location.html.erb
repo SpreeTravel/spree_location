@@ -1,13 +1,11 @@
-<div class="alpha two columns">
-    <%= f.fields_for :location_id do |location_field| %>   
-        <%= location_field.label(:latitude, I18n.t('latitude')) %><br />
-        <%= location_field.number_field :latitude %>
-    <% end %>
-</div>
-<div class="omega two columns">
-    <%= f.fields_for :location_id do |location_field| %>   
-        <%= location_field.label(:longitude, I18n.t('longitude')) %><br />
-        <%= location_field.number_field :longitude %>    
+<div class="alpha four columns">
+    <%= f.fields_for :location do |location_form| %>           
+      <%= location_form.label :latitude, Spree.t(:latitude) %>
+      <%= location_form.number_field :latitude %>
+      <%= location_form.label :longitude, Spree.t(:longitude) %>
+      <%= location_form.number_field :longitude %>
     <% end %>
 </div>
 
+
+ 
