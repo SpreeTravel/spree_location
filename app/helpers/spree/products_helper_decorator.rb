@@ -1,12 +1,13 @@
 Spree::ProductsHelper.module_eval do
     def product_map(product)		
-        variant = 1		                
+        variant = 2		                
         full_url = ''
 
-		product.location ||= Spree::Location.new({longitude: 61.1631, longitude: -149.9721})
+		product.location ||= Spree::Location.new({latitude: 40.689060, longitude: -74.044636})
+				
 		latitude = product.location.latitude
 		longitude = product.location.longitude
-        
+		        
         case variant
         when 0
             full_url = '/assets/staticmap.png'
@@ -23,7 +24,7 @@ Spree::ProductsHelper.module_eval do
             full_url = "#{url}?#{query_string}"
         when 2
             #TODO: resolve issue
-            map = GoogleStaticMapsHelper::Map.new :size => '340x300', :sensor => false#, :zoom => map_zoom
+            map = GoogleStaticMapsHelper::Map.new :size => '340x300', :sensor => true #, :zoom => map_zoom       
             marker = GoogleStaticMapsHelper::Marker.new({lng: longitude, lat: latitude, color: 'red', size: 'normal'})
             map << marker
             
