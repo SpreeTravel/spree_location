@@ -1,4 +1,8 @@
 Spree::ProductsHelper.module_eval do
+<<<<<<< HEAD
+
+=======
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735
 	def setup_location(product)
 	    product.location ||= Spree::Location.new
 	    product

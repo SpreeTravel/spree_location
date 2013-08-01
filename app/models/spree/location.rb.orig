@@ -1,0 +1,14 @@
+class Spree::Location < ActiveRecord::Base
+<<<<<<< HEAD
+  belongs_to :locatable, :polymorphic => true
+  attr_accessible :latitude, :longitude
+
+  # TODO validades :latitude, :longitude
+=======
+  belongs_to :locationable, polymorphic: true
+            
+  attr_accessible :latitude, :longitude 
+  
+  #TODO validades :latitude, :longitude 
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735
+end

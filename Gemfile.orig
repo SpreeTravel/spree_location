@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+source 'http://localhost/rubygems/'
+
+# Provides basic authentication functionality for testing parts of your engine
+gem 'spree_auth_devise', :git => 'file:///home/pqr/work/jaf/spree_gems/spree_auth_devise.git/', :branch => '2-0-stable'
+=======
+source 'https://rubygems.org'
+
+# Provides basic authentication functionality for testing parts of your engine
+#gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
+gem 'google_static_maps_helper'
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735
+
+gemspec

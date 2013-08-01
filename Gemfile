@@ -1,6 +1,6 @@
-source 'http://localhost/rubygems/'
+source 'https://rubygems.org'
 
 # Provides basic authentication functionality for testing parts of your engine
-gem 'spree_auth_devise', :git => 'file:///home/pqr/work/jaf/spree_gems/spree_auth_devise.git/', :branch => '2-0-stable'
+#gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
 
 gemspec

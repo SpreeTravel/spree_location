@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= f.fields_for :location do |location_form| %>
   <div class="alpha two columns">
     <%= f.field_container :latitude do %>
@@ -12,3 +13,19 @@
     <% end %>
   </div>
 <% end %>
+
+
+
+=======
+<div class="alpha four columns">
+    <%= f.fields_for :location do |location_form| %>           
+      <%= location_form.label :latitude, Spree.t(:latitude) %>
+      <%= location_form.number_field :latitude %>
+      <%= location_form.label :longitude, Spree.t(:longitude) %>
+      <%= location_form.number_field :longitude %>
+    <% end %>
+</div>
+
+
+ 
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735
