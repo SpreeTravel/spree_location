@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'OpenJAF'
   s.email     = 'pqr@example.com'
-  s.homepage  = 'http://github.com/openjaf/spree_travel/spree_location'
+  s.homepage  = 'http://github.com/openjaf/spree_location'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
