@@ -11,4 +11,11 @@
       <%= location_form.text_field :longitude %>
     <% end %>
   </div>
+<<<<<<< HEAD
 <% end %>
+
+
+
+=======
+<% end %>
+>>>>>>> 7e08b91b3f3db14290cdf73bba2c73f3ee080f85

@@ -8,8 +8,13 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'OpenJAF'
-  s.email     = 'pqr@openjaf.com'
+<<<<<<< HEAD
+  s.email     = 'pqr@example.com'
   s.homepage  = 'http://github.com/openjaf/spree_location'
+=======
+  s.email     = 'info@openjaf.com'
+  s.homepage  = 'http://github.com/openjaf/spree_travel/spree_location'
+>>>>>>> 7e08b91b3f3db14290cdf73bba2c73f3ee080f85
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")

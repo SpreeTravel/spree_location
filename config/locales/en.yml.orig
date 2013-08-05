@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+<<<<<<< HEAD
+  longitude: "Longitude"
+  latitude: "Latitude"
+=======
+  hello: "Hello world"
+  latitude: "Latitude"
+  longitude: "Longitude"
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735

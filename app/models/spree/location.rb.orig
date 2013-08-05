@@ -3,4 +3,8 @@ class Spree::Location < ActiveRecord::Base
   attr_accessible :latitude, :longitude
 
   # TODO validades :latitude, :longitude
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 7e08b91b3f3db14290cdf73bba2c73f3ee080f85

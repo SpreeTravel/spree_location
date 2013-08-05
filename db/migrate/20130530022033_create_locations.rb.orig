@@ -1,0 +1,15 @@
+class CreateLocations < ActiveRecord::Migration
+  def change
+<<<<<<< HEAD
+    create_table :spree_locations do |t|
+      t.references :locatable, :polymorphic => true
+=======
+    create_table :locations do |t|
+      t.references :locationable, :polymorphic => true
+>>>>>>> 53ee89b3dba4d22348864364d1cdbc6e85391735
+      t.float :latitude
+      t.float :longitude
+      t.timestamps
+    end
+  end
+end
