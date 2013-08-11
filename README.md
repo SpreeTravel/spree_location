@@ -21,5 +21,6 @@ bundle exec rails g spree_location:install
 
 Copy migrations from spree_location to application:
 
+```shell
 bundle exec rake spree_location:install:migrations
-
+```
