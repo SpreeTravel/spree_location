@@ -21,7 +21,7 @@ Spree::ProductsHelper.module_eval do
       options[:sensor] = 'false'
       options[:markers] = "#{latitude},#{longitude},blue"
       options[:center] = "#{latitude},#{longitude}"
-      options[:zoom] = 7
+      options[:zoom] = 9
       query_string = options.keys.collect{|key| "#{key}=#{options[key]}"}.join('&')
       full_url = "#{url}?#{query_string}"      
     when 2
