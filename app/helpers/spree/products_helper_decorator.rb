@@ -22,7 +22,8 @@ Spree::ProductsHelper.module_eval do
       options[:markers] = "#{latitude},#{longitude},blue"
       options[:center] = "#{latitude},#{longitude}"
       options[:zoom] = 15
-      full_url = "#{url}?#{query_string}"
+      query_string = options.keys.collect{|key| "#{key}=#{options[key]}"}.join('&')
+      full_url = "#{url}?#{query_string}"      
     when 2
       # TODO: resolve issue?? (migue que problema hay aqui??)
       map = GoogleStaticMapsHelper::Map.new :size => '338x244', :sensor => true, :zoom => 7
