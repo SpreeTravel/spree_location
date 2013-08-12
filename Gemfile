@@ -4,6 +4,9 @@ case CONFIG
 when :pqr
   GEMS_PATH = 'http://localhost/rubygems/'
   SPREE_DEVISE_PATH = 'file:///home/pqr/work/jaf/spree'
+when :dustet
+  GEMS_PATH = 'http://localhost/rubygems/'
+  SPREE_DEVISE_PATH = 'file:///home/pqr/work/jaf/spree'
 else
   GEMS_PATH = 'http://rubygems.org'
   SPREE_DEVISE_PATH = 'https://github.com/spree'
