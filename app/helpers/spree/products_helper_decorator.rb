@@ -1,8 +1,8 @@
 Spree::ProductsHelper.module_eval do
 
   def product_map(product)
-    #TODO: (peter si quieres has una rama develop o local, pero en el master del github no debe estar variat=0)  
-    variant = 1
+    #TODO: (peter si quieres has una rama develop o local, pero en el master del github no debe estar variat=0)
+    variant = 0
     full_url = ''
     # TODO: los valores por defecto sacarlos de Spree::Config::Location.default_latitude
     product.location ||= Spree::Location.new(:latitude => 23.1341642187384, :longitude => -82.3605751991272)
@@ -23,7 +23,7 @@ Spree::ProductsHelper.module_eval do
       options[:center] = "#{latitude},#{longitude}"
       options[:zoom] = 9
       query_string = options.keys.collect{|key| "#{key}=#{options[key]}"}.join('&')
-      full_url = "#{url}?#{query_string}"      
+      full_url = "#{url}?#{query_string}"
     when 2
       # TODO: resolve issue?? (migue que problema hay aqui??)
       map = GoogleStaticMapsHelper::Map.new :size => '338x244', :sensor => true, :zoom => 7
