@@ -2,7 +2,8 @@
 # Please see http://spreecommerce.com/documentation/extensions.html#versionfile for details
 
 # Examples
-#
+
+ '2.0.x'  => { :branch => 'master' }
 # '1.2.x'  => { :branch => 'master' }
 # '1.1.x'  => { :branch => '1-1-stable' }
 # '1.0.x'  => { :branch => '1-0-stable' }
