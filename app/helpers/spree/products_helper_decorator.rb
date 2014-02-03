@@ -2,7 +2,7 @@ Spree::ProductsHelper.module_eval do
 
   def product_map(product)
     #TODO: (peter si quieres has una rama develop o local, pero en el master del github no debe estar variat=0)
-    variant = 0
+    variant = 1
     full_url = ''
     # TODO: los valores por defecto sacarlos de Spree::Config::Location.default_latitude
     product.location ||= Spree::Location.new(:latitude => 23.1341642187384, :longitude => -82.3605751991272)
