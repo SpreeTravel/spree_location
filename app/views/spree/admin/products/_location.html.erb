@@ -1,14 +1,20 @@
-<%= f.fields_for :location do |location_form| %>
+<%= f.fields_for @product.location do |location_form| %>
   <div class="alpha two columns">
     <%= f.field_container :latitude do %>
-      <%= location_form.label :latitude, Spree.t(:latitude) %>
-      <%= location_form.text_field :latitude %>
+      <%= location_form.label :latitude, t(:latitude) %>
+      <%= location_form.text_field :latitude, :value =>  @product.location.latitude%>
     <% end %>
   </div>
   <div class="alpha two columns">
     <%= f.field_container :longitude do %>
-      <%= location_form.label :longitude, Spree.t(:longitude) %>
-      <%= location_form.text_field :longitude %>
+      <%= location_form.label :longitude, t(:longitude) %>
+      <%= location_form.text_field :longitude, :value => @product.location.longitude %>
     <% end %>
   </div>
 <% end %>
+
+
+<div data-hook="product_map" id="item_map">
+ <h6 class="product-section-title"><%= t(:map) %></h6>
+ <%= product_map( @product || product) %>     
+</div>
