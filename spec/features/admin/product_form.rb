@@ -9,11 +9,11 @@ describe "Product Form" do
     
     subject{ page }
     
-    let!(:product) {create(:product, :name => 'apache baseball cap', :price => 10)}    
+    let!(:product) {create(:product, :name => 'apache baseball cap', :price => 10)}
 
     before(:each) do
       visit spree.admin_path
-    end 
+    end
 
     it "has the fields to add latitude and longitude" do      
       visit spree.admin_product_path(product)      

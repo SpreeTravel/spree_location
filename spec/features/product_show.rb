@@ -11,10 +11,10 @@ describe "Product Show" do
     let!(:product) {create(:product, :name => 'apache baseball cap', :price => 10, :location => productlocation)}        
 
     it "shows a map with the correct location" do        
-      visit spree.root_path
+      visit spree.product_path(product)
       should have_content('Map')
-      within ("data-hook.product_map") do
-        should have_css('img src.http://maps.google.com/maps/api/staticmap?size=338x244&maptype=roadmap&sensor=false&markers=23.129,-82.38,blue&center=23.129,-82.38&zoom=9')
+      within ("#item_map") do
+        should have_css('img[src="http://maps.google.com/maps/api/staticmap?size=338x244&maptype=roadmap&format=png32&sensor=false&center=23.129,-82.38&zoom=10&markers=23.129,-82.38"]')
       end
     end
   end

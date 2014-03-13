@@ -5,7 +5,6 @@ Spree::Admin::ProductsController.class_eval do
   after_filter :fix_db, :only => :update
 
   protected
-
     def set_location      
       location = Spree::Location.find_by_locatable_id(Spree::Product.find_by_name(params[:product][:name]).id)      
       latitude = params[:product][:location][:latitude]
