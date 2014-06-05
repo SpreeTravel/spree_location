@@ -1,4 +1,4 @@
-<%= f.fields_for @product.location do |location_form| %>
+<%= f.fields_for :location do |location_form| %>
   <div class="alpha two columns">
     <%= f.field_container :latitude do %>
       <%= location_form.label :latitude, t(:latitude) %>
