@@ -5,7 +5,7 @@ Spree::ProductsHelper.module_eval do
     variant = 1
     full_url = ''
     # TODO: los valores por defecto sacarlos de Spree::Config::Location.default_latitude
-    product.location ||= Spree::Location.new(:latitude => 23.1341642187384, :longitude => -82.3605751991272)
+    product.location ||= Spree::Location.new(0, 0)
 
     latitude = product.location.latitude
     longitude = product.location.longitude

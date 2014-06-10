@@ -1,6 +1,7 @@
 # Run Coverage report
 require 'simplecov'
 SimpleCov.start do
+  add_filter 'spec/dummy'
   add_group 'Controllers', 'app/controllers'
   add_group 'Helpers', 'app/helpers'
   add_group 'Mailers', 'app/mailers'
@@ -17,8 +18,6 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
-require 'factory_girl'
-FactoryGirl.find_definitions
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -29,13 +28,12 @@ require 'spree/testing_support/factories'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
-require 'spree/testing_support/capybara_ext'
 
 # Requires factories defined in lib/spree_location/factories.rb
 require 'spree_location/factories'
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods  
+  config.include FactoryGirl::Syntax::Methods
 
   # == URL Helpers
   #
@@ -60,7 +58,7 @@ RSpec.configure do |config|
 
   # Capybara javascript drivers require transactional fixtures set to false, and we use DatabaseCleaner
   # to cleanup after each test instead.  Without transactional fixtures set to false the records created
-  # to setup a test will be unavailable to the browser, which runs under a seperate server instance.
+  # to setup a test will be unavailable to the browser, which runs under a separate server instance.
   config.use_transactional_fixtures = false
 
   # Ensure Suite is set to use transactions for speed.

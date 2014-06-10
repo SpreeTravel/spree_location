@@ -9,7 +9,7 @@ describe "Product Form" do
 
     subject{ page }
 
-    let!(:product) {create(:product, :name => 'apache baseball cap', :price => 10)}
+    let!(:product) {create(:product, :name => 'apache baseball cap', :price => 10, :permalink => 'apache-baseball-jersey')}
     let!(:product2) {create(:product, :name => 'apache baseball jersey', :price => 10)}
 
     before(:each) do

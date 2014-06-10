@@ -1,4 +1,8 @@
-<div data-hook="product_map">
- <h6 class="product-section-title"><%= t('map')%></h6>
- <%= product_map( @product || product) %> 		
-</div>
+<%if not(@product.location.nil?)%>
+  <%if @product.location.latitude != 0 %>
+    <div data-hook="product_map">
+      <h6 class="product-section-title"><%= t('map')%></h6>
+      <%= product_map( @product || product) %>
+    </div>
+  <%end%>
+<%end%>
