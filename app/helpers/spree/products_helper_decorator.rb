@@ -28,7 +28,7 @@ Spree::ProductsHelper.module_eval do
       map << marker
       full_url = map.url
     end
-    %<<img src="#{full_url}" width="338" height="244" alt="item location on a map">>.html_safe
+    %<<img src="#{full_url}" width="338" height="244" alt="#{product.name} on the map">>.html_safe
   end
 
 
