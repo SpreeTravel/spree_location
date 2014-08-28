@@ -1,4 +1,4 @@
-source 'file:///Users/dustet/rubygems'
+source 'https://rubygems.org'
 
 gem 'spree_auth_devise'
 
