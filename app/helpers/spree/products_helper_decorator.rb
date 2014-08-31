@@ -40,7 +40,7 @@ Spree::ProductsHelper.module_eval do
       when 1
         url = "http://maps.google.com/maps/api/staticmap"
         options = {}
-        options[:size] = '220x220'
+        options[:size] = '338x245'
         options[:maptype] = 'roadmap'
         options[:format] = 'png32'
         options[:sensor] = 'false'
@@ -63,7 +63,7 @@ Spree::ProductsHelper.module_eval do
         map << marker
         full_url = map.url
       end
-      %<<img src="#{full_url}" width="220" height="220" alt="listed items location on the map">>.html_safe
+      %<<img src="#{full_url}" width="338" height="245" alt="listed items location on the map">>.html_safe
 
     end
   end
