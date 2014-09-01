@@ -9,4 +9,13 @@ Spree::Product.class_eval do
       Spree::Location.create_location_for(self)
     end
   end
+
+  def set_location(options = {})
+    set_default_location
+    self.reload
+    l = self.location
+    l.longitude = options[:longitude]
+    l.latitude = options[:latitude]
+    l.save
+  end
 end

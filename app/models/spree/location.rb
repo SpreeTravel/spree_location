@@ -10,4 +10,5 @@ class Spree::Location < ActiveRecord::Base
     l.locatable = product
     l.save
   end
+
 end
