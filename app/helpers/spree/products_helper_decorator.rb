@@ -41,7 +41,7 @@ Spree::ProductsHelper.module_eval do
       when 1
         url = "http://maps.google.com/maps/api/staticmap"
         options = {}
-        options[:size] = (the_options[:view] == :show ? '338x245' : '220x220')
+        options[:size] = (the_options[:view] == :show ? '340x245' : '220x220')
         options[:maptype] = 'roadmap'
         options[:format] = 'png32'
         options[:sensor] = 'false'
@@ -59,13 +59,13 @@ Spree::ProductsHelper.module_eval do
         query_string = options.keys.collect{|key| "#{key}=#{options[key]}"}.join('&')
         full_url = "#{url}?#{query_string}"
       when 2
-        map = GoogleStaticMapsHelper::Map.new :size => (the_options[:view] == :show ? '338x245' : '220x220'), :sensor => true, :zoom => 7
+        map = GoogleStaticMapsHelper::Map.new :size => (the_options[:view] == :show ? '340x245' : '220x220'), :sensor => true, :zoom => 7
         marker = GoogleStaticMapsHelper::Marker.new( :lng => longitude, :lat => latitude, :color => 'red', :size => 'normal')
         map << marker
         full_url = map.url
       end
       if the_options[:view] == :show
-        %<<img src="#{full_url}" width="338" height="245" alt="listed items location on the map">>.html_safe
+        %<<img src="#{full_url}" width="340" height="245" alt="listed items location on the map">>.html_safe
       else
         %<<img src="#{full_url}" width="220" height="220" alt="listed items location on the map">>.html_safe
       end
