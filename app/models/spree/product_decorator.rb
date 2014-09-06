@@ -5,6 +5,8 @@ Spree::Product.class_eval do
   after_save :set_default_location
 
   def set_default_location
+    self.reload
+    self.location.reload rescue nil
     unless self.location
       Spree::Location.create_location_for(self)
     end
