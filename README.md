@@ -66,6 +66,4 @@ guidelines:
 
 License
 -------
-
-Spree Location is Copyright © 2014 openjaf. It is free software, and may be
-redistributed under the terms specified in the MIT-LICENSE file.
+Copyright © 2013 OpenJAF, released under the New BSD License.
